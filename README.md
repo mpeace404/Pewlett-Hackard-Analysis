@@ -27,5 +27,7 @@ As it stands currently, only 748 of the 45,397 retiring engineering employees ar
 
 This chart displays the roles each department is expected to lose in the "Silver Tsunami". One recommendation would be to broaden the available mentors by including more senior staff by title instead of birth year. 
 
+Please note that per the requirements the first deliverable queried the number of retirement eligible employees in total from the employees chart, it does not take into account employees that have already left the company. This chart is based on current employees, therefore the numbers may be different.
+
 ![dept_title_count](https://user-images.githubusercontent.com/82191831/128644863-c182e8df-df72-4501-8bf5-c4594b2bd693.jpg)
   
