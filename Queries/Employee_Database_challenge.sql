@@ -47,3 +47,24 @@ ON (e.emp_no = t.emp_no)
 WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 	AND de.to_date = ('9999-01-01')
 ORDER BY e.emp_no;
+
+-- Additional Analysis queries 
+-- Number of employees eligible for mentorship program by title
+SELECT COUNT(m.title), 
+	m.title
+	--INTO mentor_titles
+FROM mentorship_eligibility as m
+GROUP BY title
+ORDER BY m.count DESC;
+
+-- Number of retirees by department
+SELECT COUNT(ce.emp_no), de.dept_no,
+	u.title
+	INTO dept_title_count
+FROM current_emp as ce
+LEFT JOIN dept_emp as de
+ON ce.emp_no = de.emp_no
+LEFT JOIN unique_titles as u
+ON ce.emp_no = u.emp_no
+GROUP BY de.dept_no, u.title
+ORDER BY de.dept_no;
